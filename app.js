@@ -55,11 +55,6 @@ function nextScreen(div, section) {
     nextScreen(this, 'start');
   });
 
-  
-//   function nextScreen(div) {
-//     div.parents(".starter-screen").hide().next().addClass("animate-in");
-//   }
-
 // How many rounds would you play  
 let howManyRounds = document.querySelectorAll(".choose-rounds li");
 howManyRounds.forEach(liRound => {
@@ -77,11 +72,6 @@ function setBestOf(selectedRounds) {
     let endScreenRounds;
     bestOf = selectedRounds.dataset.rounds;
     document.querySelector(".best-of").innerText = bestOf;
-    
-    // Set the active class on the number of rounds on the end screen
-
-    // endScreenRounds = ".rounds-" + bestOf;
-    // $(endScreenRounds).addClass("active").siblings().removeClass("active");
 }  
 
 
