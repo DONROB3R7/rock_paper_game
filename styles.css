@@ -1,6 +1,20 @@
 
-/* Animation */
+/* Font imported */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
+
+/* CSS Reset */
+*,  body {
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    font-family: 'Courgette', cursive;
+}
+
+
+/* Animation */
 @keyframes fade-in-left {
     0% {
         transform: translateX(-100%);
@@ -110,10 +124,10 @@
 }
 @media only screen and (min-width: 800px) {
     .button.active:hover {
-        color: #333;
+        color: #fff;
    }
     .button.active:hover:before, .button.active:hover:after {
-        background-color: #78d1dc;
+        background-color: #033023;
    }
 }
 .button:before, .button:after {
@@ -123,7 +137,7 @@
     width: 51%;
     height: 100%;
     top: 0;
-    background-color: #f9f9f9;
+    background-color: #06AB7D;
     transition: 0.4s ease-out all;
 }
 .button:before {
@@ -134,7 +148,6 @@
 }
 @media only screen and (min-width: 800px) {
     .button:hover {
-        color: #333;
         transition: 0.4s ease-out all;
    }
     .button:hover:before, .button:hover:after {
@@ -158,31 +171,31 @@
     background-color: #ffcbe2;
 }
 .rock {
-    background-image: url('http://hannahch.com/images/rock.svg');
+    background-image: url('./images/P.png');
 }
 .paper {
-    background-image: url('http://hannahch.com/images/paper.svg');
+    background-image: url('./images/R.png');
 }
 .scissors {
-    background-image: url('http://hannahch.com/images/scissors.svg');
+    background-image: url('./images/S.png');
 }
 .character1 {
-    background-image: url('http://hannahch.com/images/character1.svg');
+    background-image: url('./images/M1.png');
 }
 .character2 {
-    background-image: url('http://hannahch.com/images/character2.svg');
+    background-image: url('./images/M2.png');
 }
 .character3 {
-    background-image: url('http://hannahch.com/images/character3.svg');
+    background-image: url('./images/M3.png');
 }
 .robot1 {
-    background-image: url('http://hannahch.com/images/robot1.svg');
+    background-image: url('./images/C1.png');
 }
 .robot2 {
-    background-image: url('http://hannahch.com/images/robot2.svg');
+    background-image: url('./images/C2.png');
 }
 .robot3 {
-    background-image: url('http://hannahch.com/images/robot3.svg');
+    background-image: url('./images/C3.png');
 }
 /*========================================== GENERAL ==========================================*/
 html {
@@ -192,7 +205,6 @@ html {
 body {
     background-color: #78d1dc;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 2rem;
     overflow: hidden;
 }
@@ -218,7 +230,7 @@ h3 {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: #333;
+    background-color: #077187;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -241,19 +253,16 @@ h3 {
         font-size: 6rem;
    }
 }
-.main-header h1 span:first-child {
-    font-family: 'Luckiest Guy', cursive;
-}
+
 .main-header h1 span:nth-child(2) {
     animation-delay: 0.7s;
-    font-family: 'Open Sans Condensed', sans-serif;
+    
 }
 .game-started .main-header h1 span:nth-child(2) {
     animation-delay: 0.2s;
 }
 .main-header h1 span:last-child {
     animation-delay: 0.9s;
-    font-family: 'Mr Dafoe', cursive;
 }
 .game-started .main-header h1 span:last-child {
     animation-delay: 0.2s;
@@ -263,6 +272,7 @@ h3 {
 }
 .game-started .main-header h1 {
     padding: 0;
+    display: none;
 }
 .intro {
     animation: fade-in-left 0.2s ease-out both 1.3s;
@@ -278,10 +288,22 @@ h3 {
     width: 100%;
 }
 .starter-screens .button {
-    background-color: #eee1fe;
+    background-color: #fff;
     color: #333;
     margin-bottom: 10px;
 }
+
+.starter-screens  .starter-screen.choose-rounds .button {
+    border-radius: 0%;
+    margin:30px;
+}
+
+@media only screen and (min-width: 800px) {
+    .starter-screens  .starter-screen.choose-rounds .button {
+        border-radius: 50%;
+    }
+}
+
 .game-started .starter-screens {
     animation: fade-out-right 0.5s both 0.2s;
 }
@@ -301,7 +323,6 @@ h3 {
    }
 }
 .starter-screen li {
-    font-family: 'Mr Dafoe', cursive;
     font-size: 3rem;
 }
 @media only screen and (min-width: 800px) {
@@ -421,7 +442,7 @@ h3 {
     cursor: pointer;
     transition: 0.4s ease-out all;
     margin: 1rem;
-    background-size: 70%;
+    background-size: 105%;
 }
 .game-started .weapon li {
     animation: bg 0.3s ease-out both 1s;
@@ -437,8 +458,8 @@ h3 {
         margin: 0 4rem;
    }
     .weapon li:hover {
-        background-color: #78d1dc;
-        border-color: #f9f9f9;
+        background-color: #06AB7D;
+        border-color: black;
         transition: 0.4s ease-out all;
    }
 }
@@ -509,7 +530,7 @@ h3 {
     height: 10rem;
     display: inline-block;
     background-position: bottom -0.5rem center;
-    background-size: 60%;
+    background-size: 105%;
 }
 @media only screen and (min-width: 1200px) {
     .computer-choice-icon, .player-choice-icon {
